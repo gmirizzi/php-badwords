@@ -18,7 +18,7 @@
         Lunghezza testo: <?= strlen($str)?> caratteri.
     </div>
     <?php
-    $badword=$_GET['badword'];
+    $badword=trim($_GET['badword']);
     $censuredStr=str_replace($badword, "***", $str);
     ?>
     <div>
