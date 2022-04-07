@@ -11,6 +11,12 @@
     $str = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, perferendis ducimus quasi doloribus cumque libero. Illo unde beatae, dolore distinctio doloremque dolorum! Totam consectetur deleniti aspernatur soluta exercitationem ullam! Impedit!
     ";
     ?>
-    Testo: <?= $str ?>
+    <div>
+        Testo: <?= $str ?>
+    </div>
+    <div>
+        Lunghezza testo: <?= strlen($str)?> caratteri.
+    </div>
+
 </body>
 </html>
