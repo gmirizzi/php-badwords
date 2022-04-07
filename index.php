@@ -18,11 +18,11 @@
         Lunghezza testo: <?= strlen($str)?> caratteri.
     </div>
     <?php
-    $badword=trim($_GET['badword']);
-    $censuredStr=str_replace($badword, "***", $str);
+    $badword=ucwords(trim($_GET['badword']));
+    $censuredStr=str_replace($badword, "***", ucwords($str));
     ?>
     <div>
-        Testo censurato: <?= $censuredStr ?>
+        Testo censurato: <?= ucfirst(strtolower($censuredStr)) ?>
     </div>
     <div>
         Lunghezza testo: <?= strlen($censuredStr)?> caratteri.
