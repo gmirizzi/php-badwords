@@ -19,13 +19,13 @@
     </div>
     <?php
     $badword=ucwords(trim($_GET['badword']));
-    $censuredStr=str_replace($badword, "***", ucwords($str));
+    $censuredStr=str_ireplace($badword, "***", $str);
     ?>
     <div>
-        Testo censurato: <?= ucfirst(strtolower($censuredStr)) ?>
+        Testo censurato: <?= $censuredStr ?>
     </div>
     <div>
-        Lunghezza testo: <?= strlen($censuredStr)?> caratteri.
+        Lunghezza testo censurato: <?= strlen($censuredStr)?> caratteri.
     </div>
 </body>
 </html>
